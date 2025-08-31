@@ -1,0 +1,237 @@
+/* General Body and Layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #ADD8E6; /* Light Blue */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    /* Retained from your CSS, but adding display: flex for alignment */
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #1e6f8f;
+}
+
+.logo-link {
+    text-decoration: none;
+    display: flex; 
+    align-items: center; 
+    color: #fff; 
+}
+
+.logo img {
+    height: 50px; 
+    margin-right: 10px; 
+    border-radius: 30px; 
+}
+
+.clinic-name-text {
+    font-size: 1.5rem; 
+    font-weight: bold;
+    color: #1e6f8f;
+    white-space: nowrap; 
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #1e6f8f;
+}
+
+/* Hero Section */
+#hero {
+    background: url('https://t3.ftcdn.net/jpg/15/18/39/18/240_F_1518391848_sS3JvmZPBgySGbIMmfwAseZlqK1w9xUn.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#a6ddf0;
+    position: relative;
+}
+
+.hero-content {
+    background-color:transparent;
+    padding-top: 130px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ADD8E6;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #1e6f8f;
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+/* Card Styling for forms */
+.card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+/* Service Grid */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.service-item img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease-in-out; 
+}
+
+.service-item img:hover {
+    transform: scale(1.05); 
+}
+/* Form Styling (BMI & Contact) */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #94c5d1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #35758f;
+}
+
+#bmi-result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Responsive Design with Media Queries */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+     .logo {
+        flex-direction: row; 
+        text-align: left;
+    }
+    
+    .logo img {
+        height: 50px; 
+    }
+
+    .clinic-name-text {
+        font-size: 1.2rem; 
+    }
+     .service-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+    }
+
+    .service-item {
+        margin-bottom: 20px; 
+    }
+}
