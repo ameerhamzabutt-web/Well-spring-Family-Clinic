@@ -205,42 +205,49 @@ footer {
         padding: 15px;
     }
 
-    /* Navigation adjustments */
-    nav {
-        align-items: center;
-        text-align: center;
-        padding: 1rem;
-    }
+   nav {
+                align-items: center;
+                text-align: center;
+                padding: 1rem;
+                flex-direction: column;
+                width: 100%;
+            }
 
-    nav ul {
-        list style :none;
-        margin-top: 10px;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
+            nav ul {
+                margin-top: 10px;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 100%;
+                padding: 0;
+            }
 
-    nav ul li {
-        margin: 0 10px;
-        font-size: 0.9rem;
-    }
-   nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 200;
-    transition: color 0.3s;
-}
+            nav ul li {
+                margin: 5px 8px;
+                font-size: 0.9rem;
+            }
+           
+            nav ul li a {
+                text-decoration: none;
+                color: #fff;
+                font-weight: 500;
+                transition: color 0.3s;
+                white-space: nowrap;
+                display: block;
+                padding: 5px;
+            }
 
-nav ul li a:hover {
-    color: #1e6f8f;
-}
+            nav ul li a:hover {
+                color: #1e6f8f;
+            }
 
-    .logo {
-        flex-direction: row;
-        align-items: center;
-    }
-
+            .logo {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
     .logo img {
         height: 40px;
         margin-right: 5px;
@@ -253,7 +260,6 @@ nav ul li a:hover {
     /* Hero section adjustments */
     #hero {
         height: 80vh; 
-        display:flex;
         background-size: cover;
         background-repeat: no-repeat; 
         background-position:relative;
@@ -269,6 +275,7 @@ nav ul li a:hover {
         gap: 20px;
     }
 }
+
 
 
 
