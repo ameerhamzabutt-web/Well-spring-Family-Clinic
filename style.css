@@ -31,7 +31,6 @@ nav {
 }
 
 .logo {
-    /* Retained from your CSS, but adding display: flex for alignment */
     display: flex;
     align-items: center;
     font-weight: bold;
@@ -41,22 +40,22 @@ nav {
 
 .logo-link {
     text-decoration: none;
-    display: flex; 
-    align-items: center; 
-    color: #fff; 
+    display: flex;
+    align-items: center;
+    color: #fff;
 }
 
 .logo img {
-    height: 50px; 
-    margin-right: 10px; 
-    border-radius: 30px; 
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 30px;
 }
 
 .clinic-name-text {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     font-weight: bold;
     color: #1e6f8f;
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 
 nav ul {
@@ -94,7 +93,7 @@ nav ul li a:hover {
 }
 
 .hero-content {
-    background-color:transparent;
+    background-color: transparent;
     padding-top: 130px;
     border-radius: 10px;
 }
@@ -131,6 +130,7 @@ section {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
 /* Service Grid */
 .service-grid {
     display: grid;
@@ -142,12 +142,15 @@ section {
 .service-item img {
     border-radius: 50%;
     margin-bottom: 20px;
-    transition: transform 0.4s ease-in-out; 
+    transition: transform 0.4s ease-in-out;
+    max-width: 100%; /* Ensures images don't overflow on small screens */
+    height: auto;
 }
 
 .service-item img:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
+
 /* Form Styling (BMI & Contact) */
 form {
     display: flex;
@@ -187,7 +190,6 @@ form button:hover {
     font-weight: bold;
 }
 
-
 /* Footer */
 footer {
     text-align: center;
@@ -197,42 +199,56 @@ footer {
 }
 
 /* Responsive Design with Media Queries */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+    /* General adjustments for tablets and smaller devices */
+    .container {
+        padding: 15px;
+    }
+
+    /* Navigation adjustments */
     nav {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        padding: 1rem;
     }
 
     nav ul {
         margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
     }
 
     nav ul li {
-        margin: 0 10px;
+        margin: 5px 0;
     }
 
-    .hero-content h1 {
-        font-size: 2rem;
+    .logo {
+        flex-direction: row;
+        align-items: center;
     }
-     .logo {
-        flex-direction: row; 
-        text-align: left;
-    }
-    
+
     .logo img {
-        height: 50px; 
+        height: 40px;
+        margin-right: 5px;
     }
 
     .clinic-name-text {
-        font-size: 1.2rem; 
-    }
-     .service-grid {
-        grid-template-columns: 1fr; 
-        gap: 20px; 
+        font-size: 1.2rem;
     }
 
-    .service-item {
-        margin-bottom: 20px; 
+    /* Hero section adjustments */
+    #hero {
+        height: 70vh; /* Shorter height for mobile */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Smaller font for better fit */
+    }
+
+    /* Service grid adjustments */
+    .service-grid {
+        grid-template-columns: 1fr; /* Stack services on top of each other */
+        gap: 20px;
     }
 }
-
