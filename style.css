@@ -213,6 +213,7 @@ footer {
     }
 
     nav ul {
+        list style :none;
         margin-top: 10px;
         flex-direction: row;
         align-items: center;
@@ -224,6 +225,16 @@ footer {
         margin: 0 10px;
         font-size: 0.9rem;
     }
+   nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 200;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #1e6f8f;
+}
 
     .logo {
         flex-direction: row;
@@ -242,9 +253,10 @@ footer {
     /* Hero section adjustments */
     #hero {
         height: 80vh; 
-        background-size: 80%;
+        display:flex;
+        background-size: cover;
         background-repeat: no-repeat; 
-        background-position: center;
+        background-position:relative;
     }
 
     .hero-content h1 {
@@ -257,5 +269,6 @@ footer {
         gap: 20px;
     }
 }
+
 
 
