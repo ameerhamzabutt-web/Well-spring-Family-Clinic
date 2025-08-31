@@ -197,7 +197,7 @@ footer {
 }
 
 /* Responsive Design with Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     nav {
         flex-direction: column;
         text-align: center;
@@ -235,3 +235,4 @@ footer {
         margin-bottom: 20px; 
     }
 }
+
