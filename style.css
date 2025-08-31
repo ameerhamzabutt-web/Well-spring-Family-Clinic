@@ -215,7 +215,7 @@ footer {
 
     nav ul {
         margin-top: 10px;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
@@ -239,7 +239,10 @@ footer {
 
     /* Hero section adjustments */
     #hero {
-        height: 70vh; /* Shorter height for mobile */
+        height: 50vh; 
+        background-size: contain; 
+        background-repeat: no-repeat; 
+        background-position: center;
     }
 
     .hero-content h1 {
@@ -252,3 +255,4 @@ footer {
         gap: 20px;
     }
 }
+
